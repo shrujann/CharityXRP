@@ -10,3 +10,5 @@ Built during the XRPL Hackathon in 24 hours, this MVP aims to demonstrate how de
 
 
 # 🎯 Full Description
+
+By leveraging on the XRP Ledger, we are able to 
