@@ -1,5 +1,13 @@
 # 🚀 DonateX
 
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Full Description](#full-description)
+- [Technical Description](#technical-description)
+- [Usage Instructions](#usage-instructions)
+- [Installation](#installation)
+- [Contributors](#contributors)
+
 **DonateX** is a blockchain-powered donation platform that enables transparent, traceable crypto contributions to NGOs and social causes. Built on the XRPL, this platform ensures donor trust by making every transaction publicly verifiable.
 
 Donors can contribute using popular cryptocurrencies **(XRP, ETH, BTC)** and view the dispersion of funds through the official XRPL Ledger. NGOs can showcase real-world impact by anchoring event milestones and project updates on-chain. **DonateX** is designed for scalability, experimentation, and ease of use—ideal for  future social impact applications.
