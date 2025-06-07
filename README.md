@@ -7,3 +7,6 @@ Donors can contribute using popular cryptocurrencies **(XRP, ETH, BTC)** and vie
 Built during the XRPL Hackathon in 24 hours, this MVP aims to demonstrate how decentralised tech can solve real-world problems in the nonprofit space.
 
 🔗 Live demo, test credentials, and setup instructions can be found below.
+
+
+# 🎯 Full Description
