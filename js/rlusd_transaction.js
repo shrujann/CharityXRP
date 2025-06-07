@@ -120,7 +120,8 @@ async function sendRLUSD() {
 }
 
 // Execute the transaction function
-console.log("🚀 Starting RLUSD payment process...");
+/*console.log("🚀 Starting RLUSD payment process...");
 sendRLUSD().then(() => {
     console.log("✨ Process completed!");
-});
+});*/
+module.exports = { sendRLUSD };

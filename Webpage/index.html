@@ -3,155 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>XRP Charity | Donate Crypto to Make a Difference</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      background-color: #f5f7fa;
-      color: #333;
-    }
-
-    header {
-      background-color: #ffffff;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    }
-
-    nav a {
-      margin-left: 30px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 100px 20px 60px;
-      background-color: #e8f1ff;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #555;
-      margin-bottom: 30px;
-    }
-
-    .cta-button {
-      background-color: #0052ff;
-      color: #fff;
-      padding: 15px 30px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .crypto-icons {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .crypto-icons img {
-      width: 50px;
-      height: 50px;
-    }
-
-    .partners {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .partners img {
-      max-width: 150px;
-      margin: 20px;
-    }
-
-    .how-it-works {
-      background-color: #fff;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .how-it-works h2 {
-      margin-bottom: 40px;
-      font-size: 2rem;
-    }
-
-    .steps {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-
-    @media(min-width: 768px) {
-      .steps {
-        flex-direction: row;
-        justify-content: center;
-      }
-
-      .step {
-        max-width: 300px;
-      }
-    }
-
-    .step {
-      padding: 20px;
-      background-color: #f0f4ff;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-    }
-
-    .step h3 {
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-    }
-  </style>
+  <title>Web 3 Solutions for Social Change</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="styles/styles.css" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="logo"><strong>XRPCharity</strong></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="donate.html">Donate</a>
-      <a href="about.html">About</a>
-    </nav>
+    <div class="container">
+      <a href="#" class="logo">XRPCharity</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="donate.html">Donate</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
   </header>
 
   <section class="hero">
-    <h1>Donate Crypto to Make a Difference</h1>
-    <p>Help NGOs create real-world impact through transparent blockchain donations.</p>
-    <button class="cta-button">Start Donating</button>
+    <div class="hero-content">
+      <h1>Donate Crypto to Make a Difference</h1>
+      <p>Help NGOs create real-world impact through transparent blockchain donations.</p>
+      <button class="cta-button">Start Donating</button>
 
-    <div class="crypto-icons">
-      <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=029" alt="Bitcoin" />
-      <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png?v=029" alt="Ethereum" />
-      <img src="https://cryptologos.cc/logos/xrp-xrp-logo.png?v=029" alt="XRP" />
+      <div class="crypto-icons">
+        <img src="svg/bitcoin-btc-cryptocurrency-svgrepo-com.svg" alt="Bitcoin" />
+        <img src="svg/ethereum-crypto-cryptocurrency-svgrepo-com.svg" alt="Ethereum" />
+        <img src="svg/ripple-xrp-cryptocurrency-2-svgrepo-com.svg" alt="XRP" />
+      </div>
     </div>
   </section>
 
   <section class="partners" id="partners">
     <h2>Our Partners</h2>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TEDx_white_red.png" alt="Partner 1" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/UNICEF_logo.png" alt="Partner 2" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/World_Food_Programme_Logo.svg/512px-World_Food_Programme_Logo.svg.png" alt="Partner 3" />
+    <div class="partner-logos">
+      <img src="svg/TEDx_idkxTc8gwO_0.svg" alt="TEDx" />
+      <img src="svg/Logo_of_UNICEF.svg" alt="UNICEF" />
+      <img src="svg/wfp-logo-standard-white-en.svg" alt="World Food Programme" />
+    </div>
   </section>
 
   <section class="how-it-works">
@@ -171,5 +59,69 @@
       </div>
     </div>
   </section>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add scroll effect to header
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(11, 14, 17, 0.98)';
+      } else {
+        header.style.background = 'rgba(11, 14, 17, 0.95)';
+      }
+    });
+
+    // Add hover effect to CTA button
+    const ctaButton = document.querySelector('.cta-button');
+    ctaButton.addEventListener('click', () => {
+      // Add a ripple effect
+      const ripple = document.createElement('span');
+      ripple.style.cssText = `
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(0);
+        animation: ripple 0.6s linear;
+        pointer-events: none;
+      `;
+      
+      const rect = ctaButton.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      ripple.style.width = ripple.style.height = size + 'px';
+      ripple.style.left = (event.clientX - rect.left - size / 2) + 'px';
+      ripple.style.top = (event.clientY - rect.top - size / 2) + 'px';
+      
+      ctaButton.style.position = 'relative';
+      ctaButton.appendChild(ripple);
+      
+      setTimeout(() => ripple.remove(), 600);
+    });
+
+    // Add CSS for ripple animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
 </body>
 </html>
