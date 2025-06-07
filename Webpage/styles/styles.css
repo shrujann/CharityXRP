@@ -504,6 +504,14 @@
     color: #000;
   }
 
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+    transition: all 0.3s ease;
+  }
+
   .project-content {
     padding: 1.5rem;
   }
