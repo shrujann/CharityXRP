@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0B0E11 0%, #1E2329 50%, #0B0E11 100%);
+            color: #EAECEF;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(132, 240, 182, 0.1) 0%, transparent 70%);
+            z-index: 1;
+        }
+
+        .container {
+            background: linear-gradient(135deg, rgba(30, 35, 41, 0.9) 0%, rgba(43, 50, 56, 0.6) 100%);
+            backdrop-filter: blur(20px);
+            padding: 3em 2.5em;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(132, 240, 182, 0.1);
+            min-width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2em;
+            position: relative;
+            z-index: 2;
+            border: 1px solid rgba(132, 240, 182, 0.2);
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #62b689, #84F0B6);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .donate-btn, .submit-btn, .continue-btn {
+            background: linear-gradient(135deg, #62b689 0%, #84F0B6 100%);
+            color: #000;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(98, 182, 137, 0.3);
+            letter-spacing: 0.5px;
+        }
+
+        .donate-btn:hover, .submit-btn:hover, .continue-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(98, 182, 137, 0.4);
+        }
+
+        .donation-form, .address-form, .thankyou-message {
+            display: none;
+            flex-direction: column;
+            gap: 1.5em;
+            width: 100%;
+            align-items: center;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        label {
+            margin-bottom: 0.8em;
+            font-weight: 600;
+            color: #84F0B6;
+            font-size: 1.05em;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"] {
+            padding: 1em 1.2em;
+            border: 1px solid rgba(132, 240, 182, 0.2);
+            border-radius: 8px;
+            font-size: 1em;
+            background: rgba(11, 14, 17, 0.6);
+            color: #EAECEF;
+            transition: all 0.3s ease;
+            outline: none;
+            backdrop-filter: blur(10px);
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus {
+            border: 1px solid #84F0B6;
+            background: rgba(11, 14, 17, 0.8);
+            box-shadow: 0 0 0 3px rgba(132, 240, 182, 0.1);
+        }
+
+        input::placeholder {
+            color: #B7BDC6;
+        }
+
+        .address-form-content {
+            text-align: center;
+            width: 100%;
+        }
+
+        .address-label {
+            font-weight: 600;
+            color: #84F0B6;
+            margin-bottom: 1em;
+            font-size: 1.1em;
+        }
+
+        .address-string {
+            font-family: 'Fira Mono', 'Courier New', monospace;
+            background: linear-gradient(135deg, rgba(98, 182, 137, 0.1) 0%, rgba(132, 240, 182, 0.05) 100%);
+            color: #84F0B6;
+            padding: 1.5em;
+            border-radius: 12px;
+            margin: 1.5em 0;
+            font-size: 1em;
+            letter-spacing: 1px;
+            word-break: break-all;
+            border: 1px solid rgba(132, 240, 182, 0.2);
+            box-shadow: 0 4px 16px rgba(132, 240, 182, 0.1);
+        }
+
+        .thankyou-message {
+            text-align: center;
+        }
+
+        .thankyou-message h2 {
+            color: #84F0B6;
+            font-size: 2.2em;
+            margin-bottom: 0.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #84F0B6 0%, #62b689 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .thankyou-message p {
+            color: #B7BDC6;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        /* Floating particles animation */
+        .particle {
+            position: absolute;
+            background: rgba(132, 240, 182, 0.6);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .particle:nth-child(1) {
+            width: 4px;
+            height: 4px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .particle:nth-child(2) {
+            width: 6px;
+            height: 6px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .particle:nth-child(3) {
+            width: 3px;
+            height: 3px;
+            bottom: 30%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 2em 1.5em;
+                min-width: unset;
+                width: 95vw;
+                margin: 0 1rem;
+            }
+
+            .donate-btn, .submit-btn, .continue-btn {
+                padding: 0.9rem 2rem;
+                font-size: 1rem;
+            }
+
+            .thankyou-message h2 {
+                font-size: 1.8em;
+            }
+
+            .address-string {
+                font-size: 0.9em;
+                padding: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    
+    <div class="container">
+        <h1>Donate to Support Us</h1>
+        <button class="donate-btn" id="donateBtn">Donate</button>
+        
+        <form class="donation-form" id="donationForm">
+            <div class="form-group">
+                <label for="amount">Amount to be donated</label>
+                <input type="number" id="amount" name="amount" min="1" placeholder="Enter amount" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@email.com" required>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+        
+        <div class="address-form" id="addressForm">
+            <div class="address-form-content">
+                <div class="address-label">Please send your donation to the following address:</div>
+                <div class="address-string" id="addressString">rEXAMPLE1234567890ADDRESS</div>
+            </div>
+            <button class="continue-btn" id="continueBtn">Continue</button>
+        </div>
+        
+        <div class="thankyou-message" id="thankYouMsg">
+            <h2>Thank you for your donation!</h2>
+            <p>Your generosity is greatly appreciated.</p>
+        </div>
+    </div>
+
+    <script>
+        const donateBtn = document.getElementById('donateBtn');
+        const donationForm = document.getElementById('donationForm');
+        const addressForm = document.getElementById('addressForm');
+        const continueBtn = document.getElementById('continueBtn');
+        const thankYouMsg = document.getElementById('thankYouMsg');
+
+        donateBtn.addEventListener('click', () => {
+            donateBtn.style.display = 'none';
+            donationForm.style.display = 'flex';
+        });
+
+        donationForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            donationForm.style.display = 'none';
+            addressForm.style.display = 'flex';
+        });
+
+        continueBtn.addEventListener('click', function() {
+            fetch('http://localhost:3000/api/send-rlusd', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' }
+                // body: JSON.stringify({ amount, address }) // if you want to send data
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    console.log('Transaction sent!');
+                } else {
+                    alert('Transaction failed: ' + data.error);
+                }
+            })
+            .catch(err => {
+                alert('Error: ' + err.message);
+            });
+
+            addressForm.style.display = 'none';
+            thankYouMsg.style.display = 'flex';
+        });
+    </script>
+</body>
+</html>
