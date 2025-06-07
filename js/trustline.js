@@ -28,7 +28,7 @@ async function main() {
         console.log("✅ Connected to the XRPL Testnet");
 
         // Step 2: Generate a new wallet
-        const wallet = xrpl.Wallet.generate();
+        const wallet = xrpl.Wallet.fromSeed("sEdVLGG1EuhiVCadcPbMC5SyE9fNEun");
         console.log("🔑 Wallet generated:");
         console.log("  - Address:", wallet.address);
         console.log("  - Seed:", wallet.seed);

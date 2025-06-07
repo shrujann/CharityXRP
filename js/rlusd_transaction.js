@@ -8,8 +8,8 @@ require('dotenv').config();
  * 💰 AMOUNT_RLUSD: The amount of RLUSD to send
  * 🏦 ISSUER_ADDRESS: The address of the RLUSD issuer
  */
-const SOURCE_SEED = "sEd71CfChR48xigRKg5AJcarEcgFMPk"; // Replace with the source wallet seed
-const DESTINATION_ADDRESS = ""; // Destination wallet address with RLUSD trustline enabled
+const SOURCE_SEED = "sEdSWC3QDJaCxRfXqEKmRRmcKY7HhGX"; // Replace with the source wallet seed
+const DESTINATION_ADDRESS = "rwYSu9dqMZfDR83MxHrTEexvtrdSoq66bZ"; // Destination wallet address with RLUSD trustline enabled
 const AMOUNT_RLUSD = "1"; // Amount in RLUSD to send
 const ISSUER_ADDRESS = "rQhWct2fv4Vc4KRjRgMrxa8xPN9Zx9iLKV"; // RLUSD issuer address
 
