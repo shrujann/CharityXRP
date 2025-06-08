@@ -78,7 +78,9 @@ This command should be run within the "CharityXRP" Folder on the terminal.
 4. **Accessing the frontend**
 Open http://localhost:3000/ in your browser to view the site.
 
+# Block Explorer Link
 
+[Track our transactions here!](https://testnet.xrpl.org/accounts/rwi7Es9QXv1x1W7zbKx6hwELp4s4c5NpLB)
 
 
 
