@@ -38,6 +38,7 @@ The following below are the SDKs and tools used in designing this application.
 | **dotenv**  | Used to securely manage environment variables such as XRPL seeds, secret keys, and API endpoints. Keeps sensitive data out of version control. |
 
 # 🔗 Live Demo
+[![Watch the video](https://vimeo.com/1091520522?share=copy)
 
 # 💻 Installation
 
