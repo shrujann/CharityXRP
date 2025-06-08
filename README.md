@@ -51,8 +51,8 @@ Steps:
 
 1. **Clone the Repository**
 ```
-git clone https://github.com/your-username/CharityXRP.git
-cd CharityXRP
+git clone https://github.com/shrujann/DonateX.git
+cd DonateX
 ```
 
 2. **Install Dependencies**
