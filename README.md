@@ -41,6 +41,42 @@ The following below are the SDKs and tools used in designing this application.
 
 # 💻 Installation
 
+Prequisities:
+- Node.js (v22.16.0)
+- npm (v10.9.2)
+- Browser
+
+Steps:
+
+1. **Clone the Repository**
+```
+git clone https://github.com/your-username/CharityXRP.git
+cd CharityXRP
+```
+
+2. **Install Dependencies**
+```
+npm install
+```
+
+If hvaing issues with dependencies, you can do them manually with:
+
+```
+npm install express cors
+npm install xrpl
+```
+
+3. **Running the backend server**
+
+```
+node server.js 
+```
+
+This command should be run within the "CharityXRP" Folder on the terminal.
+
+4. **Accessing the frontend**
+Open http://localhost:3000/ in your browser to view the site.
+
 
 
 
